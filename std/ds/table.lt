@@ -1,0 +1,30 @@
+import std/builtins;
+
+pubic class Table {
+  Table __init(self) {
+    self.map = builtins.__lat_newmap();
+
+    return self;
+  }
+
+  public @null set(self, k: @string, v: @any) {
+    builtins.__lat_mapset(self.map, k, v);
+  }
+
+  public @any get(self, k: *@string) {
+    return builtins.__lat_mapget(self.map, k);
+  }
+
+  public @int len(self) {
+    return builtins.__lat_maplen(self.map);
+  }
+
+
+  @null __setattr(self, k: @string, v: @any) {
+    builtins.__lat_mapset(self.map, k, v);
+  }
+
+  @any __getttr(self, k: *@string) {
+    return builtins.__lat_mapget(self.map, k);
+  }
+}

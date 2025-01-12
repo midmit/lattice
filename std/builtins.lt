@@ -1,0 +1,14 @@
+// Globals provided by the vm
+
+// Variables
+#[vm("_VM.__LAT_VERSION")] @string __LAT_VERSION;
+
+// Map function
+#[vm("_VM.__lat_newmap")] @map __lat_newmap();
+#[vm("_VM.__lat_mapset")] @null __lat_mapset(map: *@map, key: @string, value: @any);
+#[vm("_VM.__lat_mapget")] @any __lat_mapget(map: *@map, key: *@string);
+
+// Debug
+#[vm("_VM.__lat_panic")] @noret __lat_panic();
+#[vm("_VM.__lat_tostring")] @string __lat_tostring(value: *@any);
+#[vm("_VM.__lat_dbg")] @null __lat_dbg(...args: [*@any; ...]);

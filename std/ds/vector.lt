@@ -1,0 +1,29 @@
+import std/builtins;
+
+pubic class Vector {
+  Vector __init(self) {
+    self.map = builtins.__lat_newmap();
+
+    return self;
+  }
+
+  public @null push(self, v: @any) {
+    builtins.__lat_mappush(self.map, v);
+  }
+
+  public @any pop(self) {
+    return builtins.__lat_mappop(self.map);
+  }
+
+  public @int len(self) {
+    return builtins.__lat_maplen(self.map);
+  }
+
+  @any __geti(self, index: @int) {
+    return builtins.__lat_mapgeti(self.map, index);
+  }
+
+  @null __seti(self, index: @int, v: @any) {
+    builtins.__lat_mapseti(self.map, index, v);
+  }
+}

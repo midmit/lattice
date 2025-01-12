@@ -1,0 +1,6 @@
+#[link("std/libs/libc.so")] import libc;
+
+public @int printf(literal: @string, ...rest: [@any; ...]) {
+  return libc.printf(literal, ...rest);
+}
+

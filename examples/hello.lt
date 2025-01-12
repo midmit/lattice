@@ -1,0 +1,13 @@
+#[externlib("raylib/raylib.so")] import raylib;
+
+raylib.InitWindow(800, 450, "Example window");
+
+while (!raylib.WindowShouldClose())
+{
+  raylib.BeginDrawing();
+  raylib.ClearBackground(raylib.RAYWHITE);
+  raylib.DrawText("Hello, World!");
+  raylib.EndDrawing();
+}
+
+raylib.CloseWindow();

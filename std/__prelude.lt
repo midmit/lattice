@@ -1,0 +1,12 @@
+alias null = @null;
+alias string = @string;
+alias int = @int;
+alias float = @float;
+alias map = @map;
+alias fn = @fn;
+
+alias def = @any;
+
+pubic module builtins;
+pubic module ds;
+public module fmt;

@@ -1,0 +1,10 @@
+import std/builtins;
+
+public @null debug(...args: [*@any; ...]) {
+  builtins.__lat_dbg(args);
+}
+
+public @noret todo(message: *@string) {
+  builtins.__lat_dbg(message);
+  builtins.__lat_panic();
+}
