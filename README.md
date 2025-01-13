@@ -30,4 +30,4 @@ Works on native wayland with my `shell.nix`. You might need to troubleshoot.
 cargo r -- run -d asms/bins/raylib.lass
 ```
 
-![Raylib Hello World](./imgs/raylib)
+![Raylib Hello World](./imgs/raylib.png)
