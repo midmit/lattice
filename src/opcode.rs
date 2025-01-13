@@ -26,15 +26,16 @@ pub enum Opcode {
     JMP,  // i, a; pc = (int)r[a]
     JMPI, // i, ax; pc = pc + (int)ax;
     JEQ,
-    DBG_PRINT,
-    Invalid(u8),
-    // new
+    // Call related
     SAVE_STATE, // i; rn[...] = rm[...]
     CALL,       // i, a, b, c; (function)globals[(string)r[a]](r[0], r[1], r[2], ..., r[b]) -> r[c]
     RECALL,     // r(n+1)[...] = rn[...]
     // Shared Libs
-    LOAD_LIB,
-    LOAD_SYM,
+    LOAD_LIB, // i, a, b; import (file)a as b
+    LOAD_SYM, // i, a, b; import a.b
+    // Misc
+    DBG_PRINT,
+    Invalid(u8),
 }
 
 impl From<u8> for Opcode {
@@ -113,6 +114,7 @@ impl Into<u8> for Opcode {
             Opcode::JMP => 0xe0,
             Opcode::JMPI => 0xe1,
             Opcode::JEQ => 0xe2,
+
             Opcode::DBG_PRINT => 0xfe,
             Opcode::Invalid(i) => i,
         }

@@ -18,12 +18,8 @@ pkgs.mkShell {
     pkgs.wayland
     pkgs.wayland-protocols
     pkgs.libxkbcommon
-    pkgs.glfw
+    pkgs.glfw-wayland
     pkgs.wayland-scanner
-    pkgs.xwayland
-
-    pkgs.xorg.libX11
-    pkgs.mesa
   ];
 
   env = {

@@ -1,7 +1,5 @@
 #include "rules.asm"
 
-#d8 0x4c, 0x41, 0x53, 0x53 ; 32-bit magic value
-#d32 0x0000_0001 ; 32-bit LASS-version
 #d64 code
 
 data:
@@ -19,10 +17,8 @@ data:
   #d string, "raylib.ClearBackground", 0x00 ; 10
   #d string, "raylib.DrawText", 0x00 ; 11
   #d string, "raylib.EndDrawing", 0x00 ; 12
-  #d u32
-  #d32 0xffff_ffff ; 13 WHITE
-  #d u32
-  #d32 0xff00_0000 ; 14 BLACK
+  #d u32, 0xffff_ffff ; 13 WHITE
+  #d u32, 0xff00_0000 ; 14 BLACK
   ; ------------ we need libc to sleep
   #d string, "std/libs/libc.so", 0x00 ; 15
   #d string, "libc", 0x00 ; 16

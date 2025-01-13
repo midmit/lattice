@@ -1,4 +1,7 @@
-all: loads moves constants jump printf raylib
+all: create_bin_dir loads moves constants jump printf raylib
+
+create_bin_dir:
+	mkdir -p bins/
 
 loads: loads.asm
 	customasm -o bins/loads.lass loads.asm
