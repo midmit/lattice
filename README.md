@@ -22,7 +22,7 @@ For documentation on opcode check `src/opcode.rs`
 
 Bytecode format is defined in `asms/rules.asm`
 
-# Raylib Demo
+## Raylib Demo
 
 Works on native wayland with my `shell.nix`. You might need to troubleshoot.
 
