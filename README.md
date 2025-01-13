@@ -19,4 +19,5 @@ cargo r -- run -d asms/bins/printf.lass
 ```
 
 For documentation on opcode check `src/opcode.rs`
+
 Bytecode format is defined in `asms/rules.asm`
