@@ -4,7 +4,7 @@ A simple bytecode VM and maybe a languagee in future.
 
 ## Compile asm examples
 
-You need (customasm)[https://github.com/hlorenzi/customasm] to compile the assembly examples.
+You need [customasm](https://github.com/hlorenzi/customasm) to compile the assembly examples.
 
 
 ```sh
